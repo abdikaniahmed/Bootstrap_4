@@ -1,4 +1,23 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+
+// Variables on 
+$txt-color: #0f0f0f;
+
+/* header {
+    button{
+        color:$txt-color;
+        &:hover{
+           background:white;
+        }
+    }
+} 
+ //same as
+ header button{
+     color:$txxt-color;
+ }
+
+*/
+
 body{
     padding:50px 0px 0px 0px;
     z-index:0;
@@ -27,19 +46,11 @@ body{
     min-height:300px;
 }
 
-.footer{
-    background-color: #D1C4E9;
-    margin:0px auto;
-    padding: 20px 0px 20px 0px;
-}
-
-address{
-    font-size:80%;
-    margin:0px;
-    color:#0f0f0f;
-}
+@import '_footer';
+    
+@import '_variables';
 .tab-content {
-    border: 1px solid #ddd;
+    @include Border();
     border-top: none;
     padding: 10px;
 }

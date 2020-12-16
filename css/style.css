@@ -1,4 +1,18 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+/* header {
+    button{
+        color:$txt-color;
+        &:hover{
+           background:white;
+        }
+    }
+} 
+ //same as
+ header button{
+     color:$txxt-color;
+ }
+
+*/
 body {
   padding: 50px 0px 0px 0px;
   z-index: 0;
