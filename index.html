@@ -268,6 +268,14 @@
                         <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </a>
+                        <div class="btn-group" id="carouselButton">
+                            <button class="btn btn-sm btn-danger" id="carousel-pause">
+                                <span class="fa fa-pause"></span>
+                            </button>
+                            <button class="btn btn-group btn-danger" id="carousel-play">
+                                <span class="fa fa-play"></span>
+                            </button>
+                        </div>
 
                     </div> <!-- end Corousel slide  -->
                 </div>
@@ -397,6 +405,18 @@
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
         <!-- OPtional Js  -->
+
+        <script>
+            $(document).ready(function(){
+                $("#mycarousel").carousel({ interval: 20})
+                $("#carousel-pause").click(function(){
+                    $("#mycarousel").carousel("pause");
+                });
+                $("#carousel-play").click(function(){
+                    $("#mycarousel").carousel('cycle');
+                })
+            })
+        </script>
 
 
     </body>
