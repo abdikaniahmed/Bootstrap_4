@@ -77,13 +77,13 @@ body{
 
 .modal-content{
     .modal-header {
-        background-color: $background-light;
+        background-color: $background-dark;
         color: floralwhite;
         Button{
             color: floralwhite;
         }
     }
     .modal-body{
-        background-color: $lt-gray;
+        background-color: $background-pale;
     }
 }
