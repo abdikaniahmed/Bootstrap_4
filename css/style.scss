@@ -54,7 +54,19 @@ body{
     padding: 10px;
 }
 
-@import "_carousel";
+.carousel {
+    background:$background-dark;
+
+    .carousel-item {
+        height: $carousel-item-height;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 300px;
+        }
+    }
+}
 
 #carouselButton {
     right:0px;
@@ -63,3 +75,15 @@ body{
     z-index: 1;
 }
 
+.modal-content{
+    .modal-header {
+        background-color: $background-light;
+        color: floralwhite;
+        Button{
+            color: floralwhite;
+        }
+    }
+    .modal-body{
+        background-color: $lt-gray;
+    }
+}

@@ -49,7 +49,7 @@
                                 Test</a></li>
                     </ul>
                     <span class="navbar-text navbar-Model">
-                        <a data-toggle="modal" data-target="#loginModal">
+                        <a id="loginModalButton">
                             <span class="fa fa-sign-in"></span> Login</a>
                     </span>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">Login </h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" id="modalX">&times;</button>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="form-row">
                                 <button type="button" class="btn btn-secondary btn-sm ml-auto"
-                                    data-dismiss="modal">Cancel</button>
+                                    id="modalC">Cancel</button>
                                 <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
                             </div>
                         </form>
@@ -195,7 +195,7 @@
                         <img src="img/logo.png" class="img-fluid">
                     </div>
                     <div class="col-sm-3 align-self-center">
-                        <a type="button" data-toggle="modal" data-target="#ReserveT" class="btn btn-warning btn-block">
+                        <a type="button" id="ReserveButton" class="btn btn-warning btn-block">
                             Reserve Table</a>
                     </div>
                 </div>
@@ -209,7 +209,7 @@
             <div class="row row-content">
                 <div class="col">
                     <!-- Corousel slide -->
-                    <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div id="mycarousel" class="carousel slide">
                         <!-- Corousel inner  -->
                         <div class="carousel-inner" role="listbox">
                             <!-- Corousel item one  -->
@@ -405,7 +405,35 @@
 
         <script>
             $(function(){
+                // speed of carousel 
                 $("#mycarousel").carousel({ interval: 20})
+
+                // Login toggle button 
+                $("#loginModalButton").click(function(){
+                $("#loginModal").modal('show');
+                $("#loginModalButton").trigger('focus')
+                })
+
+                // x button cencelled Toggle in header
+                $("#modalX").click(function(){
+                    $("#loginModal").modal('hide');
+                })
+                //  cencel button in the form 
+                $("#modalC").click(function(){
+                    $("#loginModal").modal('hide');
+                })
+
+                $("#ReserveButton").click(function(){
+                    $("#ReserveT").modal('show');
+                })
+
+
+
+
+
+
+
+
 
                 $("#carouselButton").click(function(){
                   if  ($("#carouselButton").children('span').hasClass("fa-pause")){
@@ -419,10 +447,6 @@
                         $("#carouselButton").children('span').addClass('fa-pause')
                     }
                 });
-
-                $("#carouselButton").dblclick(function(){
-                    alert('mouse over the play button jQuery')
-                })
             })
 
         
