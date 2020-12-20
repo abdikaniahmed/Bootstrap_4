@@ -404,7 +404,7 @@
         <!-- OPtional Js  -->
 
         <script>
-            $(document).ready(function(){
+            $(function(){
                 $("#mycarousel").carousel({ interval: 20})
 
                 $("#carouselButton").click(function(){
@@ -419,7 +419,13 @@
                         $("#carouselButton").children('span').addClass('fa-pause')
                     }
                 });
+
+                $("#carouselButton").dblclick(function(){
+                    alert('mouse over the play button jQuery')
+                })
             })
+
+        
         </script>
 
 
